@@ -10,6 +10,7 @@ on:
   push: 
     paths:
       - apps/demo-time/deployments/production
+      - filez
     
 jobs:
   Azure_Spring_Apps_Demo:
