@@ -24,3 +24,7 @@ jobs:
           az account show
           az group list
           pwd
+
+    - name: Get current production
+      run: |
+          az extension add -n spring -y
