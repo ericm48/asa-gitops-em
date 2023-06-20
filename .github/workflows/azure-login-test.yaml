@@ -21,7 +21,7 @@ jobs:
   
     - name: 'Run Azure CLI commands'
       run: |
-          az account show
-          az group list
-          az extension add -n spring -y --resource-group azure-asa-uswest
-          pwd
+          az extension add -n spring -y
+          #az account show
+          #az group list
+          #pwd
