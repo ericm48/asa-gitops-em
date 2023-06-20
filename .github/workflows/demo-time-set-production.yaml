@@ -65,12 +65,11 @@ jobs:
           echo "CURRENT_PRODUCTION=$(az spring app show -n ${{ env.APP_NAME }} -s ${{ env.SERVICE_NAME }} -g ${{ env.RESOURCE_GROUP }} \
           --subscription ${{ env.AZURE_SUBSCRIPTION }}  -o tsv --query properties.activeDeployment.name)"  >> $GITHUB_ENV  
 
-    - name: Set production to ${{ env.PRODUCTION_DEPLOYMENT }}
-      if: ${{ env.CURRENT_PRODUCTION != env.PRODUCTION_DEPLOYMENT }}
-         uses: Azure/spring-apps-deploy@v1
-         with:
-           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
-           action: set-production
-           service-name: ${{ env.SERVICE_NAME }}
-           app-name: ${{ env.APP_NAME }}
-           deployment-name: ${{ env.PRODUCTION_DEPLOYMENT }}
+#    - name: Set production to ${{ env.PRODUCTION_DEPLOYMENT }}
+#      if: ${{ env.CURRENT_PRODUCTION != env.PRODUCTION_DEPLOYMENT }}
+#         uses: Azure/spring-apps-deploy@v1
+#         with:
+#           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
+#           service-name: ${{ env.SERVICE_NAME }}
+#           app-name: ${{ env.APP_NAME }}
+#           deployment-name: ${{ env.PRODUCTION_DEPLOYMENT }}
