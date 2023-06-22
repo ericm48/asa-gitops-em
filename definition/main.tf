@@ -6,11 +6,14 @@ terraform {
     }
   }
 
+  #
   # Update this block with the location of your terraform state file
+  #
+  
   backend "azurerm" {
-    resource_group_name  = "ASA-E-GitOps-State"
-    storage_account_name = "asaegitopstfstate"
-    container_name       = "tfstate"
+    resource_group_name  = "azure-storage-gha-uswest"  # "ASA-E-GitOps-State"
+    storage_account_name = "asaegitopstfstateem"       # "asaegitopstfstate"
+    container_name       = "terraform-state-container" # tfstate"
     key                  = "terraform.tfstate"
     use_oidc             = true
   }
