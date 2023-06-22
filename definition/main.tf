@@ -14,7 +14,7 @@ terraform {
     resource_group_name  = "azure-storage-gha-uswest"  # "ASA-E-GitOps-State"
     storage_account_name = "asaegitopstfstateem"       # "asaegitopstfstate"
     container_name       = "terraform-state-container" # "tfstate"
-    key                  = "cz7eVYELtBWWB/pn3nTjDB+vRxp6k/yYMsybd53OEOtzF52lYxWUPI1I3LbKmXoG0rN2kiyfXia/+AStsZb8UA=="
+    key                  = "terraform.tfstate"
     use_oidc             = true
   }
 }
